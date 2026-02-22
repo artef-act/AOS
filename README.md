@@ -14,11 +14,16 @@ This project will study how ... works
 6. I/O Management
 
 ## Environment
-I use Windows Subsystem For Linux with NixOS Distribition as main system. Here are the packages related to this development:
+I use Windows Subsystem For Linux with NixOS Distribition as main system.
+Here are the packages related to this development:
 ```
 environment.systemPackages = with pkgs; [
   gnumake # Makefile 
   spike   # RISC-V Emulator
   dtc     # Device Tree Compiler
   ]
+```
+In addition, it is necessary to use flake to enable riscv64-none-elf-gnu with command
+```bash
+nix develop
 ```
